@@ -1,0 +1,144 @@
+body{
+    padding-left: 15%;
+    padding-right: 15%;
+    /* background-color: black; */
+}
+.main {
+    background-color: rgb(39, 35, 35);
+    padding: 5%;
+    
+}
+.first {
+    background-color: rgb(39, 35, 35);
+    display: flex;
+    flex-direction: row;
+   
+    /* margin-left: 40%; */
+    /* justify-content: center; */
+    /* margin-top: 5%; */
+    
+   
+    
+}
+.ImageStyle{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    
+    
+}
+.picture{
+    /* background-color: aqua; */
+    background-color: rgb(39, 35, 35);
+    height: 900px;
+    width: 800px;
+    border-radius: 45%;
+    overflow: hidden;
+    margin-left: 10px;
+    flex: 2.5;
+    margin-right: 20px;
+
+}
+.initialInfo
+{
+    flex: 7;
+    /* background-color: blueviolet; */
+    background-color: rgb(39, 35, 35);
+    margin: 0%;
+    padding: 0%;
+}
+.spanClass{
+    font-weight:bolder;
+    font-size: 150px;
+    margin:0;
+   padding: 0;
+   margin-bottom: 10%;
+   color: 'Fb9902';
+    /* margin-top: -2%; */
+    color: #Fb9902;
+}
+.firstName{
+    color: #ffffff;
+    font-size: 120px;
+   margin: 0;
+   padding: 0;
+   
+   
+   
+}
+.designation{
+    color: #ffffff;
+    font-size: 75px;
+    margin-top: -10%;
+
+}
+.about{
+    color: #ffffff;
+    font-size: 60px;
+    margin-top: -1%;
+}
+.DownlaodButton{
+    font-size: 75px;
+    color: #ffffff ;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+.DownlaodButton:hover{
+    color: #Fb9902;
+}
+.second{
+    display: flex;
+    flex-direction: row;
+    /* background-color:aquamarine; */
+    background-color: rgb(39, 35, 35);
+}
+.firstColumn{
+    flex: 5;
+}
+ .secondColumn{
+    flex:5;
+ }
+
+ .headingClass{
+    font-size: 90px;
+    color: #Fb9902;
+    font-weight: bold;
+
+ }
+ .ExpertiseList{
+    margin-left: 2%;
+    font-size: 60px;
+    color: #ffffff;
+ }
+ .experienceList{
+    font-size: 60px;
+    color: #ffffff;
+}
+.ReferenceHeading{
+    font-size: 60px;
+    font-weight: bold;
+    color: #887d7d;
+}
+
+.ReferenceParagraph{
+    font-size: 60px;
+    color: #ffffff;
+}
+.musicTag{
+    size: 20px;
+    width: 60px;
+    height: 60px;
+    justify-self: center;
+    color: #ffffff;
+}
+.interestStyling{
+    display: flex;
+    gap: 80px;
+    color: #ffffff;
+}
+.socialMediadiv{
+    display: flex;
+    gap: 50px;
+}
