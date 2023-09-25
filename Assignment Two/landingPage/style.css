@@ -23,7 +23,7 @@ body{
     }
     .loginSignupButtons{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         /* overflow: scroll; */
     }
@@ -35,7 +35,7 @@ body{
         overflow: auto;
 
     }
-    
+
 
 }
 
@@ -95,6 +95,26 @@ body{
 .faq{
     align-self: center;
 }
+
+.iconDesign{
+    color: antiquewhite;
+   margin-right: 0.5%;
+}
+.endingMain{
+    display: flex;
+    flex-direction: row;
+
+}
+.endingSecond{
+    flex: 7;
+}
+.card-body{
+    flex: 3;
+}
+.py-5{
+    padding: 5%;
+}
+
 
 
 
