@@ -16,14 +16,6 @@ body{
     }
 
 
-.carouselDesign{
-    /* width: 100%; */
-   /* margin-left: 14%;
-   /* transform: translateX(-20%); */
-   /* border-radius: 50%;
-    */ 
-    /* width: 90%; */   
-}
 
 .CaouselDiv{
     
@@ -137,6 +129,20 @@ body{
 
 }
 
+.footerContainer{
+    background-color: black;
+    color: aliceblue;
+}
 
+.footerDiv{
+    background-color: black;
+}
+.listComponrntStyle{
+    color: white;
+}
 
-
+.iconsDivstyling{
+    margin-left: 10%;
+    display: flex;
+    gap: 10%;
+}
