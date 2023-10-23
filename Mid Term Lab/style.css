@@ -10,6 +10,17 @@ a{
 body{
     background-color: rgb(241, 243, 243);
 }
+
+
+#navbarIDfordeleting{
+    cursor: pointer;
+
+}
+
+.hidden {
+    display: none;
+}
+
 .navStyle{
     /* background-color: aqua; */
     background-color: rgb(253, 253, 253);
