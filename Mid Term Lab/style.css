@@ -1,0 +1,142 @@
+.textStyleNavbar{
+    color: black;
+    font-weight: bolder;
+}
+
+a{
+    color: black;
+    font-weight: bolder;
+}
+body{
+    background-color: rgb(241, 243, 243);
+}
+.navStyle{
+    /* background-color: aqua; */
+    background-color: rgb(253, 253, 253);
+    }
+
+
+.carouselDesign{
+    /* width: 100%; */
+   /* margin-left: 14%;
+   /* transform: translateX(-20%); */
+   /* border-radius: 50%;
+    */ 
+    /* width: 90%; */   
+}
+
+.CaouselDiv{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+.ImageDataStyle{
+    /* background-color: brown; */
+    margin: 10%;
+    
+}
+
+.learnMoreButton
+{
+    height: 10%;
+    width: 40%;
+    border-radius: 20px;
+    border-width: 0.5px;
+    margin-top: 10%;
+    margin-left: 10%;
+    
+}
+
+.learnMoreButton:hover{
+    background-color: gray;
+    color: rgb(185, 166, 166);
+
+}
+.innerMostDivSustanibility{
+    padding: 40px;
+}
+
+.AlbumMainDiv{
+    align-items: center;
+    justify-content: center;
+    justify-items: centers;    
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+.textDesign{
+    font-weight: bolder;
+}
+
+.albumCArd{
+    border-radius: 5%;
+    overflow: hidden;
+    /* margin: 50px; */
+}
+
+.AlbumMainDiv2{
+    margin-top: 2%;
+}
+
+.BrandsText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: brown; */
+    margin-top: 3%;
+}
+.brandsStickerMainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.brandInnerDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+
+}
+
+.brandInnerDiv{
+    margin: 1%;
+    /* border-radius: 10%;
+    overflow: hidden; */
+}
+
+.firstInnerDiv1{
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.lastButtonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.lastButton{
+    height: 15%;
+    width: 20%;
+    border-radius: 50px;
+    margin: 3%;
+    border-width: 0.5px;
+}
+.lastButton:hover{
+    background-color: gray;
+    color: rgb(185, 166, 166);
+
+}
+
+
+
+
