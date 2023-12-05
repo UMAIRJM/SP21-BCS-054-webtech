@@ -17,17 +17,20 @@
 </head>
 <body>
   <main class="form-signin w-100 m-auto">
-    <form id="signInform">
+    <form id="signInform" method="post" action="/login">
+      
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-  
+      <p class="wrongPassword">Wrong Email or Password</p>
       <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
         <label for="floatingInput">Email address</label>
       </div>
+      <label id="floatingInput-error" class="error manual-error" for="floatingInput"></label>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
         <label for="floatingPassword">Password</label>
       </div>
+      <label id="floatingPassword2-error" class="error manual-error" for="floatingPassword"></label>
   
       <div class="form-check text-start my-3">
         <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
