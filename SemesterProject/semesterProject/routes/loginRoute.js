@@ -1,8 +1,8 @@
 
 const express = require("express")
-const bodyParser = require("body-parser")
 const router = express.Router();
 const {newUser,authentication} = require("../models/signUpOperations")
+// const bodyParser = require("body-parser")
 // const app = express()
 // const expressLayouts = require("express-ejs-layouts")
 // app.set("layout","./layouts/mainLayout")
@@ -20,6 +20,7 @@ router.post("/",async (req,res)=>{
 
     let auth = await authentication(req.body.email,req.body.password)
     if(auth == true){
+        req.session.isAuthenticated = true
         res.redirect("/main")
     }
     else{
