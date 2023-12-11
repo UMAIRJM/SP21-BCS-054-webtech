@@ -130,7 +130,9 @@ body{
     color: antiquewhite;
 }
 
-
+.emailError{
+    color: red;
+}
 
 .manual-error{
     display: none;

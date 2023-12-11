@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/generalPage.css">
+</head>
+<body>
+    <div class="mianDiv">
+        <h1>Your Feedbacks</h1>
+    <% for (let i = 0; i < feedbacks.length; i++) { %>
+        <%let myfeedback = feedbacks[i]; %>
+        <h4><%=myfeedback.feedback%></h4>
+    <% } %>
+    <h5>Total feedbacks <%=feedbacks.length%></h5>
+    </div>
+    
+</body>
+</html>

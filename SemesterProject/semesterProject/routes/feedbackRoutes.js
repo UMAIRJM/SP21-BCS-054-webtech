@@ -2,7 +2,7 @@
 const express = require("express")
 
 const router = express.Router();
-const {newFeedback} = require("../models/operations")
+const {newFeedback,findFeedbacks} = require("../models/operations")
 
 
 
@@ -10,10 +10,31 @@ const {newFeedback} = require("../models/operations")
 
 router.post("/",async (req,res)=>{
     // res.render("login")
-    console.log(req.body)
+    let url = req.headers.referer
+    routeAddress= ""
+    for(let i = url.length-1 ;i !== 0 ;i--){
+        if(url[i] == "/"){
+            break
+        }
+        else{
+            routeAddress = routeAddress+url[i]
+        }
+        
+    }
+    newAddress = "/"
+    let i = routeAddress.length - 1
+    while (i>=0){
+        newAddress = newAddress + routeAddress[i]
+        i--  
+    }
     let feedback = req.body.feedback
-    await newFeedback(feedback)
-    res.redirect("/main")
+    validfeedback = await newFeedback(feedback)
+    res.redirect(newAddress)
+})
+
+router.get("/",async (req,res)=>{
+    let feedbacks =await findFeedbacks()
+    res.render("feedbacks",{feedbacks})
 })
 
 

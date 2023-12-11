@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
 app.locals.notheaderFooterPage = false;
-// Working onsession not completed
+//Sessions Completed
 app.use(session({
     secret:"Mine secret key",
     resave:false,
@@ -47,7 +47,6 @@ app.use("/signUp", signUpRoute)
 app.use("/login",loginRoute)
 app.use("/feedback",feedbackRoute)
 app.use("/main",mainRoute)
-
 
 mongoose.connect("mongodb+srv://umairkmehmood789:umair789@cluster0.pkhdli3.mongodb.net/portfolioData?retryWrites=true&w=majority",{
     useNewUrlParser:true,

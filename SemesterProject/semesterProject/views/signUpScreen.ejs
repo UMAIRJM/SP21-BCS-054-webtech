@@ -21,6 +21,9 @@
       <form id = "myForm" method="post" action="/signUp">
         <!-- <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
         <h1 class="h3 mb-3 fw-normal" id="tagColor">Please sign up</h1>
+        <%if(typeof error !== 'undefined' && error !== null){%>
+          <h5 class="emailError"><%=error%></h5>
+        <% }%>
         <div class="form-floating">
           <input type="text" class="form-control" id="floatingInput" name="firstName" placeholder="Ali">
           <label for="floatingInput">First Name</label>

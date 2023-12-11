@@ -1,7 +1,7 @@
 
 const signUpModel = require("./signUpModel")
-
-const newUser =async (firstName,secondName,phoneNumber,Email,password)=>{
+const bcrypt = require("bcrypt")
+async function newUser  (firstName,secondName,phoneNumber,Email,password){
     console.log("Creating User")
     let user = new signUpModel();
     user.firstName = firstName;
@@ -9,16 +9,38 @@ const newUser =async (firstName,secondName,phoneNumber,Email,password)=>{
     user.phoneNumber = phoneNumber;
     user.Email = Email;
     user.password = password;
+    const userWithSameEmail = await signUpModel.findOne({Email:Email})
+    if(userWithSameEmail){
+        console.log("user with same email already exists")
+        return false
+    }else{
+        await user.save();
+        console.log("User created in databasde sucessfully")
+        return true
 
-    await user.save();
-    console.log("User created in databasde sucessfully")
+
+    }
+    
 }
 
 const authentication = async (email,password)=>{
     try{
     const user = await signUpModel.findOne({Email:email})
-    if(user?.password == password){
-        return true;
+    if(user){
+        passordCheck = decryptingThePassword(user?.password,password)
+        if(passordCheck){
+            return {
+                auth:true,
+                userName: user.firstName
+            }
+        }
+        else{
+            return {
+                auth:false,
+                userName:"null"
+            }
+        }
+        
     }
     else{
         return false
@@ -31,6 +53,12 @@ const authentication = async (email,password)=>{
 }
     
 }
+function decryptingThePassword(StoredPassword,enteredPassword){
+    const passwordMatch = bcrypt.compareSync(enteredPassword,StoredPassword)
+    return passwordMatch
+
+}
+
 
 module.exports.newUser = newUser
 

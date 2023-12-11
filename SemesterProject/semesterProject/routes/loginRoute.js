@@ -19,12 +19,17 @@ router.post("/",async (req,res)=>{
     console.log(req.body)
 
     let auth = await authentication(req.body.email,req.body.password)
-    if(auth == true){
+    if(auth.auth == true){
         req.session.isAuthenticated = true
+        req.session.user = {
+            email:req.body.email,
+            userName:auth.userName
+        }
+        console.log(req.session.user)
         res.redirect("/main")
     }
     else{
-        res.redirect("/login")
+        res.render("signInScreen",{notheaderFooterPage:true,error:"Wrong Email or Password"})
     }
 
 })
