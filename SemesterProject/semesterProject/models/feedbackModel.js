@@ -1,6 +1,8 @@
 const mongoose = require("mongoose")
 
 const feedbackSchema = mongoose.Schema({
+    userName:String,
+    userEmail:String,
     feedback : {type:String,required:true},
 
 })

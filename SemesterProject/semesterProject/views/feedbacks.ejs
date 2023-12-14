@@ -7,13 +7,36 @@
     <link rel="stylesheet" href="/styles/generalPage.css">
 </head>
 <body>
+    <hr>
     <div class="mianDiv">
         <h1>Your Feedbacks</h1>
+        <%let colors = ['#add8e6',"#90ee90","#ffb6c1"]%>
     <% for (let i = 0; i < feedbacks.length; i++) { %>
         <%let myfeedback = feedbacks[i]; %>
-        <h4><%=myfeedback.feedback%></h4>
+        <div class="parentDiv">
+            
+        <div class="imageDiv" style="background-color: <%= colors[i % colors.length] %>"> <p id="userFirstLetter"><%=myfeedback.userName[0]%></p></div>
+        <div class="innerDiv">
+            
+            <h5><%= myfeedback.userName%></h5>
+            <p><%=myfeedback.feedback%></p>
+        </div>
+
+
+    </div>
+        
+        
     <% } %>
-    <h5>Total feedbacks <%=feedbacks.length%></h5>
+    <nav aria-label="...">
+        <ul class="pagination pagination-lg">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+        </ul>
+      </nav>
+    <h5 style="margin-top: 2%;">Total feedbacks <%=feedbacks.length%></h5>
     </div>
     
 </body>
