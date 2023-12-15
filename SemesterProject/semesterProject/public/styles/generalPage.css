@@ -93,11 +93,31 @@ body{
     margin-bottom: 3%;
     /* transform: scaleX(0.5); */
 }
+hr{
+    color: black;
+}
 
 .hireMeFormDiv{
-    background-color: aqua;
-    padding-left: 18%;
-    padding-right: 18%;
+    /* background-color: aqua;
+    */
+    background-image: url("/assets/registration.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    padding-left: 5%;
+    padding-right: 40%;
+    border-radius: 5%;
+    z-index: 2;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3%;
+
+}
+.error{
+    color:red;
+}
+
+.hireButton{
+    margin-bottom: 3%;
 }
 
 

@@ -31,6 +31,12 @@ $(function(){
                 },
                 additionalComments:{
                     required:true,
+                },
+                project:{
+                    required:true
+                },
+                preferredPlatform:{
+                    required:true
                 }
 
             },messages:{
@@ -63,8 +69,17 @@ $(function(){
                 },
                 additionalComments:{
                     required:"Provide us some more about you requirements",
+                },
+                project:{
+                    required:"Please provide platform for your project"
+                },
+                preferredPlatform:{
+                    required:"please provide your preffered platform"
                 }
 
+            },
+            submitHandler:function(form){
+                return true
             }
         }
     )

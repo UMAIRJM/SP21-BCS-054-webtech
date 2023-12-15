@@ -1,5 +1,5 @@
 body{
-    background-image: url("/assets/landingback.jpg");
+    background-image: url("/assets/grayBack.png");
     /* background-color: black; */
     background-blend-mode: multiply;
     background-position: center;    
@@ -9,6 +9,11 @@ body{
     overflow: auto;
     
 }
+.forminput{
+    border-color: black;
+    
+}
+
 
 @media (max-width: 786px) {
     body{
@@ -46,17 +51,17 @@ body{
     align-items: end;
 }
 .navBarDiv{
-    border-bottom: 1px solid antiquewhite; 
+    border-bottom: 1px solid black; 
     /* position: sticky;
     top: 0px; */
 }
 
 .container-fluid .navbar-brand{
-    color: antiquewhite;
+    color: black;
 }
 
 .navbar-nav .nav-link {
-    color:antiquewhite;
+    color:black;
   }
 
 .nav-link.active{
@@ -80,7 +85,7 @@ body{
     flex: 4;
 }
 .textDesign{
-    color: antiquewhite;
+    color: black;
 }
 .innerMost{
     display: flex;
@@ -97,7 +102,9 @@ body{
 }
 
 .iconDesign{
-    color: antiquewhite;
+    height: 30px;
+    color:black;
+    background-color: black;
    margin-right: 0.5%;
 }
 .endingMain{
@@ -116,20 +123,24 @@ body{
 }
 
 .appImage{
-    background-image: url("/assets/appdevelopment.jpg");
+    background-image: url("/assets/grayMobile.png");
     background-size: cover;
 
 
 }
 .webImage{
-    background-image: url("/assets/webdevelopmen.jpg");
+    background-image: url("/assets/grayWeb.png");
     background-size: cover;
 
 }.gameImage{
-    background-image: url("/assets/gameDevelopment.jpg");
+    background-image: url("/assets/grayGame.png");
     background-size: cover;
     
 
+}
+
+.mainHeading{
+    color: rgb(126, 124, 124);
 }
 
 
