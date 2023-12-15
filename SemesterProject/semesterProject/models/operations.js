@@ -15,8 +15,12 @@ async function newFeedback  (feedback,userCredentials){
     
 }
 
-const findFeedbacks = async()=>{
-    let feedbacks = await feedbackModel.find()
+
+async function findFeedbacks (pageNumber){
+    const pNumber = pageNumber;
+    const limit = 5;
+    let feedbacks = await feedbackModel.find().skip((pNumber-1)*limit).limit(limit);
+    
     // await feedbackModel.deleteMany({userEmail: { $exists: false }})
     return feedbacks
 }

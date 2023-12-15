@@ -27,15 +27,17 @@
         
         
     <% } %>
-    <nav aria-label="...">
+    <div class="paginatioNPage">
+      <nav aria-label="...">
         <ul class="pagination pagination-lg">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">1</a>
+          <li class="page-item ">
+            <a class="page-link" href="/feedback/1" tabindex="-1">1</a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item "><a class="page-link" href="/feedback/2">2</a></li>
+          <li class="page-item"><a class="page-link" href="/feedback/3">3</a></li>
         </ul>
       </nav>
+    </div>
     <h5 style="margin-top: 2%;">Total feedbacks <%=feedbacks.length%></h5>
     </div>
     

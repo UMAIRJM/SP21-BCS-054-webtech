@@ -19,10 +19,15 @@ router.post("/",async (req,res)=>{
 
 router.get("/",async (req,res)=>{
     console.log(req.session.user)
-    let feedbacks =await findFeedbacks()
+    let feedbacks =await findFeedbacks(1)
     res.render("feedbacks",{feedbacks})
 })
 
+router.get("/:pageNumber",async (req,res)=>{
+    const pageNumber = req.params.pageNumber
+    let feedbacks = await findFeedbacks(pageNumber)
+    res.render("feedbacks",{feedbacks})
+})
 
 module.exports = router;
 

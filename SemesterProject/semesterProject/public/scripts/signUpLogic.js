@@ -2,6 +2,7 @@ $(document).ready(function(){
     $("#myForm").validate({
         rules:{
             firstName:{
+                
                 required:true,
                 minlength: 3,
             },
