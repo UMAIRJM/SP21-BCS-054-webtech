@@ -19,6 +19,14 @@
 
 
 <div class="container mt-5 hireMeFormDiv">
+  <%if(countOfOrders!==0){%>
+    <h3>Your <%=countOfOrders%> order is already received by us</h3>
+    <h4>If you want to give more task fill the below form</h4>
+    <h6>Our Team is already coordinating with you regarding the order which is received</h6>
+    <p>For further queries you can contact us</p>
+    <hr>
+    <%}%>
+  
   <h2 class="mb-4">Hire Me Form</h2>
   <h5>Fill this form up in order to place your order</h5>
   <hr>

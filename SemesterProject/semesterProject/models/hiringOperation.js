@@ -1,5 +1,7 @@
 const { use } = require("../routes/signUpRoute");
 const hiringModel = require("./hiringModel")
+const newOrders = require("./newOrderModel")
+const rejectedModel = require("./rejectedOrdersModel")
 
 
 
@@ -37,6 +39,63 @@ async function allPendingOrders(){
     return orders
 }
 
+
+async function receiveingTheOrder(email){
+    let receivedOrder = await hiringModel.findOneAndDelete({loggedinUserEmail:email})
+    let creatingOrder = new newOrders()
+    creatingOrder.fullName =receivedOrder.fullName;
+    creatingOrder.email = receivedOrder.email;
+    creatingOrder.companyName=receivedOrder.companyName;
+    creatingOrder.industry=receivedOrder.industry;
+    creatingOrder.phoneNumber=receivedOrder.phoneNumber;
+    creatingOrder.projectType=receivedOrder.projectType;
+    creatingOrder.projectDescription=receivedOrder.projectDescription;
+    creatingOrder.prefferedPlatform=receivedOrder.preferredPlatform;
+    creatingOrder.ExtimatedBudget=receivedOrder.ExtimatedBudget;
+    creatingOrder.timeLine=receivedOrder.timeLine;
+    creatingOrder.additionalComments=receivedOrder.additionalComments;
+    creatingOrder.loggedinUserEmail=receivedOrder.loggedinUserEmail;
+    let createdOrder= await creatingOrder.save()
+    return createdOrder
+}
+
+async function orders(){
+    let orders = await newOrders.find()
+    return orders
+}
+
+async function userWithReceivedOrders(email){
+    let userReceivedOrders = await newOrders.countDocuments({loggedinUserEmail:email});
+   return userReceivedOrders;
+}
+
+async function rejectedOrders(email){
+    let receivedOrder = await hiringModel.findOneAndDelete({loggedinUserEmail:email})
+    let creatingOrder = new rejectedModel()
+    creatingOrder.fullName =receivedOrder.fullName;
+    creatingOrder.email = receivedOrder.email;
+    creatingOrder.companyName=receivedOrder.companyName;
+    creatingOrder.industry=receivedOrder.industry;
+    creatingOrder.phoneNumber=receivedOrder.phoneNumber;
+    creatingOrder.projectType=receivedOrder.projectType;
+    creatingOrder.projectDescription=receivedOrder.projectDescription;
+    creatingOrder.prefferedPlatform=receivedOrder.preferredPlatform;
+    creatingOrder.ExtimatedBudget=receivedOrder.ExtimatedBudget;
+    creatingOrder.timeLine=receivedOrder.timeLine;
+    creatingOrder.additionalComments=receivedOrder.additionalComments;
+    creatingOrder.loggedinUserEmail=receivedOrder.loggedinUserEmail;
+    let createdOrder= await creatingOrder.save()
+
+    return createdOrder
+}
+
+
+
+
 module.exports.newOrder = newOrder
 module.exports.userWithOrder= userWithOrder
 module.exports.allPendingOrders = allPendingOrders
+module.exports.receiveingTheOrder = receiveingTheOrder
+module.exports.orders= orders
+module.exports.userWithReceivedOrders =userWithReceivedOrders
+module.exports.rejectedOrders = rejectedOrders

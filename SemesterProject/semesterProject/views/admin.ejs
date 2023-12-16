@@ -16,10 +16,11 @@
         <h1>Pending Orders</h1>
         <hr>
         
-        <% if (orders && orders.length > 0) { %>
-            <% for (let i = 0; i < orders.length; i++) { %>
+        <% if (pendingOrders && pendingOrders.length > 0) { %>
+            <% for (let i = 0; i < pendingOrders.length; i++) { %>
                 <h2>Order No: <%= i %></h2>
-                <% let order = orders[i]; %>
+                <% let order = pendingOrders[i]; %>
+                <form action="/admin" method="post">
                 <table>
                     <tr>
                         <th>Client Name</th>
@@ -43,18 +44,72 @@
                         <td><%=order.projectType%></td>
                         <td><%=order.projectDescription%></td>
                         <td><%=order.prefferedPlatform%></td>
+                        <td><%=order.ExtimatedBudget%></td>
                         <td><%=order.timeLine%></td>
                         <td><%=order.additionalComments%></td>
                         <td><%=order.loggedinUserEmail%></td>
                     </tr>
                 </table>
+                    <input type="hidden" name="email" value="<%=order.loggedinUserEmail%>">
+                    <button type="submit" class="adminButtons">Receive the Order</button>
+                    
+                </form>
+                <form action="/admin/reject" method="post">
+                    <input type="hidden" name="emailToDelete" value="<%=order.loggedinUserEmail%>">
+            
+                    <button type="submit" class="adminButtons">Reject this Order</button>
+                </form>
+                
                 <hr>
             <% } %>
             
         <% } else { %>
-            <h2>No orders available.</h2>
+            <h5>No orders available.</h5>
         <% } %>
-        
+        <hr>
+        <h1>Received Orders</h1>
+        <hr>
+        <% if (receivedOrder && receivedOrder.length > 0) { %>
+            <% for (let i = 0; i < receivedOrder.length; i++) { %>
+                <h2>Order No: <%= i %></h2>
+                <% let order = receivedOrder[i]; %>
+                <table>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Email</th>
+                        <th>Industry</th>
+                        <th>Phone Number</th>
+                        <th>Project Type</th>
+                        <th>Descripion</th>
+                        <th>Platform</th>
+                        <th>Budget</th>
+                        <th>timeLine</th>
+                        <th>Comments</th>
+                        <th>Email user</th>
+                        
+                    </tr>
+                    <tr>
+                        <td><%=order.fullName%></td>
+                        <td><%=order.email%></td>
+                        <td><%=order.industry%></td>
+                        <td><%=order.phoneNumber%></td>
+                        <td><%=order.projectType%></td>
+                        <td><%=order.projectDescription%></td>
+                        <td><%=order.prefferedPlatform%></td>
+                        <td><%=order.ExtimatedBudget%></td>
+                        <td><%=order.timeLine%></td>
+                        <td><%=order.additionalComments%></td>
+                        <td><%=order.loggedinUserEmail%></td>
+                    </tr>
+                </table>
+                 
+                
+                <hr>
+            <% } %>
+            
+        <% } else { %>
+            <h2>No received orders available.</h2>
+        <% } %>
     </div>
     
 </body>
