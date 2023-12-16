@@ -2,7 +2,7 @@
 const express = require("express")
 
 const router = express.Router();
-const {newFeedback,findFeedbacks} = require("../models/operations")
+const {newFeedback,findFeedbacks,feedbackCount} = require("../models/operations")
 
 
 
@@ -18,15 +18,21 @@ router.post("/",async (req,res)=>{
 })
 
 router.get("/",async (req,res)=>{
-    console.log(req.session.user)
+    let counter = await feedbackCount()
     let feedbacks =await findFeedbacks(1)
-    res.render("feedbacks",{feedbacks})
+    let pages = counter/5
+    pages = Math.ceil(pages)
+    console.log(pages)
+    res.render("feedbacks",{feedbacks,pages})
 })
 
 router.get("/:pageNumber",async (req,res)=>{
     const pageNumber = req.params.pageNumber
+    let counter = await feedbackCount()
+    let pages = counter/5
+    pages = Math.ceil(pages)
     let feedbacks = await findFeedbacks(pageNumber)
-    res.render("feedbacks",{feedbacks})
+    res.render("feedbacks",{feedbacks,pages})
 })
 
 module.exports = router;

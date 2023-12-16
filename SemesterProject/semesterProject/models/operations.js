@@ -25,5 +25,11 @@ async function findFeedbacks (pageNumber){
     return feedbacks
 }
 
+async function feedbackCount(){
+    let feedbacksCount = await feedbackModel.countDocuments()
+    return feedbacksCount
+}
+
 module.exports.newFeedback = newFeedback
 module.exports.findFeedbacks = findFeedbacks
+module.exports.feedbackCount = feedbackCount

@@ -27,17 +27,27 @@
         
         
     <% } %>
-    <div class="paginatioNPage">
+    <!-- <div class="paginatioNPage">
       <nav aria-label="...">
-        <ul class="pagination pagination-lg">
-          <li class="page-item ">
-            <a class="page-link" href="/feedback/1" tabindex="-1">1</a>
-          </li>
-          <li class="page-item "><a class="page-link" href="/feedback/2">2</a></li>
-          <li class="page-item"><a class="page-link" href="/feedback/3">3</a></li>
-        </ul>
+          <ul class="pagination pagination-lg">
+              <% for (let i = 0; i < pages.length; i++) { %>
+                  <p>loop running</p>
+                  <li class="page-item"><a class="page-link" href="/feedback/<%= i + 1 %>"><%= i + 1 %></a></li>
+            <% } %>
+          </ul>
       </nav>
-    </div>
+  </div> -->
+  <div class="paginatioNPage">
+    <nav aria-label="...">
+      <ul class="pagination pagination-lg">
+        <li class="page-item "><a class="page-link" href="/feedback/1">1</a></li>
+        <li class="page-item "><a class="page-link" href="/feedback/2">2</a></li>
+        <li class="page-item"><a class="page-link" href="/feedback/3">3</a></li>
+        <li class="page-item"><a class="page-link" href="/feedback/4">4</a></li>
+      
+      </ul>
+    </nav>
+  </div>
     <h5 style="margin-top: 2%;">Total feedbacks <%=feedbacks.length%></h5>
     </div>
     
