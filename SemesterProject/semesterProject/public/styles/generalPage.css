@@ -1,6 +1,26 @@
 /* body{
     padding: 10%;
 } */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add margin at the top of the table */
+}
+
+th, td {
+    padding: 10px; /* Add padding to cells for spacing */
+    text-align: left;
+    border: 1px solid #ddd; /* Add border for each cell */
+}
+
+th {
+    background-color: #f2f2f2; /* Add background color to header cells */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Add alternate row background color */
+}
 body{
     margin-top: 2%;
 }

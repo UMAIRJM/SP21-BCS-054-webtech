@@ -50,10 +50,19 @@ const isAdmin = (req,res,next)=>{
     }
 
 }
+const isAdmin2 = (req,res,next)=>{
+    if(req.session.admin){
+        return next()
+    }
+    else{
+        res.render("landingpage")
+    }
+}
 const adminMiddleWareRoutes = ["/blogs","/projects","/services","/hireMe","/aboutMe","/feedback","/main"]
 const authMiddleware = ['/feedback','/hireMe','/admin']
 app.use(authMiddleware,isLoggedIn)
 app.use(adminMiddleWareRoutes,isAdmin)
+app.use('/admin',isAdmin2)
 //All App Routes
 const signUpRoute = require("./routes/signUpRoute")
 const hireMeroute = require("./routes/hireMeRoute")

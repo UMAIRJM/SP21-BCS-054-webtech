@@ -15,15 +15,46 @@
         <hr>
         <h1>Pending Orders</h1>
         <hr>
+        
         <% if (orders && orders.length > 0) { %>
-        <%for(int i =0;i<orders.length;i++){%>
-            <h2>order no:<%= i%></h2>
-            <%=let order = orders[i]%>
-            <h5>Project Category<%=order.projectType%></h5>
-        <%}%>
+            <% for (let i = 0; i < orders.length; i++) { %>
+                <h2>Order No: <%= i %></h2>
+                <% let order = orders[i]; %>
+                <table>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Email</th>
+                        <th>Industry</th>
+                        <th>Phone Number</th>
+                        <th>Project Type</th>
+                        <th>Descripion</th>
+                        <th>Platform</th>
+                        <th>Budget</th>
+                        <th>timeLine</th>
+                        <th>Comments</th>
+                        <th>Email user</th>
+                        
+                    </tr>
+                    <tr>
+                        <td><%=order.fullName%></td>
+                        <td><%=order.email%></td>
+                        <td><%=order.industry%></td>
+                        <td><%=order.phoneNumber%></td>
+                        <td><%=order.projectType%></td>
+                        <td><%=order.projectDescription%></td>
+                        <td><%=order.prefferedPlatform%></td>
+                        <td><%=order.timeLine%></td>
+                        <td><%=order.additionalComments%></td>
+                        <td><%=order.loggedinUserEmail%></td>
+                    </tr>
+                </table>
+                <hr>
+            <% } %>
+            
         <% } else { %>
-            <p>No orders available.</p>
+            <h2>No orders available.</h2>
         <% } %>
+        
     </div>
     
 </body>
