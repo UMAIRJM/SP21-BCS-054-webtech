@@ -17,12 +17,18 @@
 <body>
   <hr>
 
+
 <div class="container mt-5 hireMeFormDiv">
   <h2 class="mb-4">Hire Me Form</h2>
   <h5>Fill this form up in order to place your order</h5>
   <hr>
+<%if(userOrder){%>
+  <h4>Your Order is already placed Sucessfully</h4>
+  <h5>You cannot place further Order until your first order is received by admin</h5>
+  <h6 class="orderPlaceStyle">Please wait And explore our website we will respond to your order very soon</h6>
+  <%}else{%>
 
-  <form id="hireMeForm" method="post" action="#">
+  <form id="hireMeForm" method="post" action="/hireMe">
     <!-- Contact Information -->
     <div class="mb-3">
       <label for="fullName" class="form-label">Full Name</label>
@@ -67,9 +73,9 @@
       <label for="projectType" class="form-label" >Preffered Platform</label>
       <select class="form-select" id="projectType" name="preferredPlatform">
         <option value="" disabled selected>Select the Preferred platform</option>
-        <option value="Mobile App Development">Ios</option>
-        <option value="Game Development">Andriod</option>
-        <option value="Web Development">Web </option>
+        <option value="IOS">Ios</option>
+        <option value="Andriod">Andriod</option>
+        <option value="Browsers">Browsers </option>
       </select>
     </div>
 
@@ -100,6 +106,7 @@
     <!-- Submit Button -->
     <button type="submit" class="btn btn-primary mt-3 hireButton">Submit the Order</button>
   </form>
+<%}%>
 </div>
 
 

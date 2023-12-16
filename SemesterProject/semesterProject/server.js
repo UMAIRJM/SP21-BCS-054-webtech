@@ -38,8 +38,22 @@ const isLoggedIn = (req,res,next)=>{
         res.render('signInScreen',{notheaderFooterPage:true, error:"Please login to perform certain Action"})
     }
 }
-const authMiddleware = ['/feedback','/hireMe']
+
+const isAdmin = (req,res,next)=>{
+    if(req.session.admin)
+    {
+        let userCredentials = req.session.user
+        res.redirect("/admin")
+    }
+    else{
+        return next()
+    }
+
+}
+const adminMiddleWareRoutes = ["/blogs","/projects","/services","/hireMe","/aboutMe","/feedback","/main"]
+const authMiddleware = ['/feedback','/hireMe','/admin']
 app.use(authMiddleware,isLoggedIn)
+app.use(adminMiddleWareRoutes,isAdmin)
 //All App Routes
 const signUpRoute = require("./routes/signUpRoute")
 const hireMeroute = require("./routes/hireMeRoute")
@@ -47,11 +61,20 @@ const loginRoute = require("./routes/loginRoute")
 const feedbackRoute = require("./routes/feedbackRoutes")
 const blogsRoute = require("./routes/blogsRoute")
 const mainRoute= require("./routes/mainRoute")
+const projectRoute = require("./routes/projectsRoute")
+const servicesRoute = require("./routes/servicesRoute")
+const aboutMeRoute = require("./routes/aboutmeRoute")
+const adminRoute = require("./routes/adminRoute")
 //Middleware to use these routes
+
 app.use("/signUp", signUpRoute)
 app.use("/blogs",blogsRoute)
+app.use("/admin",adminRoute)
+app.use("/projects",projectRoute)
+app.use("/services",servicesRoute)
 app.use("/login",loginRoute)
 app.use("/hireMe",hireMeroute)
+app.use("/aboutMe",aboutMeRoute)
 app.use("/feedback",feedbackRoute)
 app.use("/main",mainRoute)
 

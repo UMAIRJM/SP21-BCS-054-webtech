@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/generalPage.css">
+</head>
+<body>
+    <hr>
+    <div class="mainServices">
+        <h4>Welcome!</h4>
+        <h6><%=userCredentials?.email%></h6>
+        <h6><%=userCredentials?.userName%></h6>
+        <hr>
+        <h1>Pending Orders</h1>
+        <hr>
+        <% if (orders && orders.length > 0) { %>
+        <%for(int i =0;i<orders.length;i++){%>
+            <h2>order no:<%= i%></h2>
+            <%=let order = orders[i]%>
+            <h5>Project Category<%=order.projectType%></h5>
+        <%}%>
+        <% } else { %>
+            <p>No orders available.</p>
+        <% } %>
+    </div>
+    
+</body>
+</html>

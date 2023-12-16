@@ -19,12 +19,20 @@ router.post("/",async (req,res)=>{
     console.log(req.body)
 
     let auth = await authentication(req.body.email,req.body.password)
+    
     if(auth.auth == true){
+        if(req.body.email=="admin456@gmail.com"){
+            req.session.admin = true
+        }
+        else{
+            req.session.admin = false
+        }
         req.session.isAuthenticated = true
         req.session.user = {
             email:req.body.email,
             userName:auth.userName
         }
+        console.log("Admin status:"+ req.session.admin)
         console.log(req.session.user)
         res.redirect("/main")
     }

@@ -120,4 +120,74 @@ hr{
     margin-bottom: 3%;
 }
 
+.orderPlaceStyle{
+    margin-bottom: 2%;
+}
 
+.projectDiv{
+    margin-top: 5%;
+    /* display: flex;
+    flex-direction: column; */
+    padding-left: 7%;
+    padding-right: 10%;
+    margin-bottom: 3%;
+    
+}
+
+.githubButton{
+    position: relative  ;
+    color: white;
+    background-color: black;
+    width: 190px;
+    height: 50px;
+    border-radius: 10%;
+    margin-top: 3%;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform:translateX(-50%)
+}
+
+.mainServices{
+    padding: 4%;
+}
+.servicesfirstDiv{
+    margin-right: 50%;
+
+}
+
+.servicesSecondDiv{
+    
+    margin-top: 3%;
+   
+}
+.servicesThirdDiv{
+    margin-top: 2%;
+    margin-left: 50%;    
+}
+
+.servicesFourthDiv{
+    margin-top: 2%;
+    margin-right: 50%;
+}
+
+.servicesFifthDiv{
+    margin-top: 2%;
+    margin-left: 50%;
+}
+
+.aboutMeInnerDiv{
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.educationDiv{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    gap: 7%;
+}
+
+.buttonStyle{
+    background-color: black;
+    color: white;
+}

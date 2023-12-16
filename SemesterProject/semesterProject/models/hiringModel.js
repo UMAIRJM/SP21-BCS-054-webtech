@@ -12,6 +12,7 @@ const hiringSchema = mongoose.Schema({
     ExtimatedBudget:String,
     timeLine:String,
     additionalComments:String,
+    loggedinUserEmail:String
 
 })
 
