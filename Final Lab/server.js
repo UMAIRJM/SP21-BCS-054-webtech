@@ -73,10 +73,12 @@ const mainRoute= require("./routes/mainRoute")
 const projectRoute = require("./routes/projectsRoute")
 const servicesRoute = require("./routes/servicesRoute")
 const aboutMeRoute = require("./routes/aboutmeRoute")
+const calculatorRoute = require("./routes/calculatorRoute")
 const adminRoute = require("./routes/adminRoute")
 //Middleware to use these routes
 
 app.use("/signUp", signUpRoute)
+app.use("/calculator",calculatorRoute)
 app.use("/blogs",blogsRoute)
 app.use("/admin",adminRoute)
 app.use("/projects",projectRoute)

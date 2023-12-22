@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/calculator.css">
+</head>
+<body>
+    <body>
+        <form id="calculatorForm" method="post" action="/calculator">
+            <div class="inputsClass">
+                <div class="input-group">
+                    <label for="operand1">Operand 1:</label>
+                    <input type="text" id="operand1" name="operand1" required>
+                </div>
+            
+                <div class="input-group">
+                    <label for="operation">Operation:</label>
+                    <select id="operation" name="operation" required>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                </div>
+            
+                <div class="input-group">
+                    <label for="operand2">Operand 2:</label>
+                    <input type="text" id="operand2" name="operand2" required>
+                </div>
+            
+            </div>
+            
+            <button type="submit">Calculate</button>
+        </form> 
+
+        <!-- <%if(resultsArrayEjs){%>
+            <%for(let i = 0; i<resultsArrayEjs.length; i++){%>
+            <div class="resultsDiv">
+                <h1><%=resultsArrayEjs[i].operator1%></h1>
+                <h1><%=resultsArrayEjs[i].operation%></h>
+                <h1><%=resultsArrayEjs[i].operator2%></h1>
+                <h1>=</h1>
+                <h1><%=resultsArrayEjs[i].result%></h1>
+
+            </div>
+            
+            
+            <%}%>
+            <%}%>
+         -->
+         <% if (resultsArrayEjs) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operand 1</th>
+                        <th>Operation</th>
+                        <th>Operand 2</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let i = 0; i < resultsArrayEjs.length; i++) { %>
+                        <tr>
+                            <td><%= resultsArrayEjs[i].operator1 %></td>
+                            <td><%= resultsArrayEjs[i].operation %></td>
+                            <td><%= resultsArrayEjs[i].operator2 %></td>
+                            <td><%= resultsArrayEjs[i].result %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        <% } %>
+        
+        
+        </body>
+</body>
+</html>
