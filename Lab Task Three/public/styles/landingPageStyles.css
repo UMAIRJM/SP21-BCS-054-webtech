@@ -1,0 +1,152 @@
+body{
+    background-image: url("/assets/grayBack.png");
+    /* background-color: black; */
+    background-blend-mode: multiply;
+    background-position: center;    
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: scroll;
+    overflow: auto;
+    
+}
+.forminput{
+    border-color: black;
+    
+}
+
+
+@media (max-width: 786px) {
+    body{
+        background-image: url('/assets/landingback.jpg');
+        background-size:cover;
+        overflow: auto;
+    }
+    #formID{
+        padding-top: 8%;
+        padding-bottom: 3%;
+        /* overflow: scroll; */
+    }
+    .loginSignupButtons{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        /* overflow: scroll; */
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+
+    }
+
+
+}
+
+
+
+.container-fluid{
+    /* padding-top: 2%; */
+    align-items: end;
+}
+.navBarDiv{
+    border-bottom: 1px solid black; 
+    /* position: sticky;
+    top: 0px; */
+}
+
+.container-fluid .navbar-brand{
+    color: black;
+}
+
+.navbar-nav .nav-link {
+    color:black;
+  }
+
+.nav-link.active{
+    font-weight: bold;
+    color: black;
+    font-size: large;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.contentdiv
+{
+    flex: 6;
+    padding: 10%;
+}
+.freeDiv
+{
+    flex: 4;
+}
+.textDesign{
+    color: black;
+}
+.innerMost{
+    display: flex;
+    flex-direction: row;
+}
+.innerMost1{
+    flex: 4;
+}
+.innermost2{
+    flex: 6;
+}
+.faq{
+    align-self: center;
+}
+
+.iconDesign{
+    height: 30px;
+    color:black;
+    background-color: black;
+   margin-right: 0.5%;
+}
+.endingMain{
+    display: flex;
+    flex-direction: row;
+
+}
+.endingSecond{
+    flex: 7;
+}
+.card-body{
+    flex: 3;
+}
+.py-5{
+    padding: 5%;
+}
+
+.appImage{
+    background-image: url("/assets/grayMobile.png");
+    background-size: cover;
+
+
+}
+.webImage{
+    background-image: url("/assets/grayWeb.png");
+    background-size: cover;
+
+}.gameImage{
+    background-image: url("/assets/grayGame.png");
+    background-size: cover;
+    
+
+}
+
+.mainHeading{
+    color: rgb(126, 124, 124);
+}
+.buttonStyle{
+    background-color: black;
+    color: white;
+}
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/generalPage.css">
+</head>
+<body>
+    <hr>
+    <div class="mianDiv">
+        <h1>Your Feedbacks</h1>
+        <%let colors = ['#add8e6',"#90ee90","#ffb6c1"]%>
+    <% for (let i = 0; i < feedbacks.length; i++) { %>
+        <%let myfeedback = feedbacks[i]; %>
+        <div class="parentDiv">
+            
+        <div class="imageDiv" style="background-color: <%= colors[i % colors.length] %>"> <p id="userFirstLetter"><%=myfeedback.userName[0]%></p></div>
+        <div class="innerDiv">
+            
+            <h5><%= myfeedback.userName%></h5>
+            <p><%=myfeedback.feedback%></p>
+        </div>
+
+
+    </div>
+        
+        
+    <% } %>
+    <!-- <div class="paginatioNPage">
+      <nav aria-label="...">
+          <ul class="pagination pagination-lg">
+              <% for (let i = 0; i < pages.length; i++) { %>
+                  <p>loop running</p>
+                  <li class="page-item"><a class="page-link" href="/feedback/<%= i + 1 %>"><%= i + 1 %></a></li>
+            <% } %>
+          </ul>
+      </nav>
+  </div> -->
+  <div class="paginatioNPage">
+    <nav aria-label="...">
+      <ul class="pagination pagination-lg">
+        <li class="page-item "><a class="page-link" href="/feedback/1">1</a></li>
+        <li class="page-item "><a class="page-link" href="/feedback/2">2</a></li>
+        <li class="page-item"><a class="page-link" href="/feedback/3">3</a></li>
+        <li class="page-item"><a class="page-link" href="/feedback/4">4</a></li>
+      
+      </ul>
+    </nav>
+  </div>
+    <h5 style="margin-top: 2%;">Total feedbacks <%=feedbacks.length%></h5>
+    </div>
+    
+</body>
+</html>

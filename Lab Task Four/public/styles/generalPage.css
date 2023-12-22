@@ -1,0 +1,225 @@
+/* body{
+    padding: 10%;
+} */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add margin at the top of the table */
+}
+
+th, td {
+    padding: 10px; /* Add padding to cells for spacing */
+    text-align: left;
+    border: 1px solid #ddd; /* Add border for each cell */
+}
+
+th {
+    background-color: #f2f2f2; /* Add background color to header cells */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Add alternate row background color */
+}
+body{
+    margin-top: 2%;
+}
+.mianDiv{
+
+    padding: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+
+}
+
+.parentDiv{
+    padding-left: 3%;
+    padding-top: 3%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+
+
+}
+
+.imageDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6%;
+    height: 10%;
+    border-radius: 100%;
+    padding: 0.4%;
+    background-color: aqua;
+    z-index: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .imageDiv {
+        
+        padding: 5%;
+        height: 4px;
+        margin-right: 2%;
+    }
+}
+
+#userFirstLetter{
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.footerClass{
+    margin-left: 3%;
+    margin-right: 3%;
+    border-width: 0px;
+}
+.iconDesign{
+    color: antiquewhite;
+   margin-right: 0.5%;
+}
+
+.paginatioNPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.blogsDiv{
+    margin-top: 2%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+/* .navBarDiv{
+    border-bottom-width: 1px;
+    border-color: black;
+} */
+
+.blogsButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2%;
+    width: 135px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: rgb(80, 80, 240);
+    border-radius: 7%;
+    border-width: 0px;
+    margin-bottom: 3%;
+    /* transform: scaleX(0.5); */
+}
+hr{
+    color: black;
+}
+
+.hireMeFormDiv{
+    /* background-color: aqua;
+    */
+    background-image: url("/assets/registration.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    padding-left: 5%;
+    padding-right: 40%;
+    border-radius: 5%;
+    z-index: 2;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3%;
+
+}
+.error{
+    color:red;
+}
+
+.hireButton{
+    margin-bottom: 3%;
+}
+
+.orderPlaceStyle{
+    margin-bottom: 2%;
+}
+
+.projectDiv{
+    margin-top: 5%;
+    /* display: flex;
+    flex-direction: column; */
+    padding-left: 7%;
+    padding-right: 10%;
+    margin-bottom: 3%;
+    
+}
+
+.githubButton{
+    position: relative  ;
+    color: white;
+    background-color: black;
+    width: 190px;
+    height: 50px;
+    border-radius: 10%;
+    margin-top: 3%;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform:translateX(-50%)
+}
+
+.adminButtons{
+    
+    width: 150px;
+    height: 40px;
+    border-radius: 10%;
+    margin-top: 1%;
+    margin-left: 2%;
+    color: white;
+    background-color: black;
+
+}
+
+.mainServices{
+    padding: 4%;
+}
+.servicesfirstDiv{
+    margin-right: 50%;
+
+}
+
+.servicesSecondDiv{
+    
+    margin-top: 3%;
+   
+}
+.servicesThirdDiv{
+    margin-top: 2%;
+    margin-left: 50%;    
+}
+
+.servicesFourthDiv{
+    margin-top: 2%;
+    margin-right: 50%;
+}
+
+.servicesFifthDiv{
+    margin-top: 2%;
+    margin-left: 50%;
+}
+
+.aboutMeInnerDiv{
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.educationDiv{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    gap: 7%;
+}
+
+.buttonStyle{
+    background-color: black;
+    color: white;
+}
